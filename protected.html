@@ -1,0 +1,31 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script defer src="/src/helpers.js"></script>
+    <script defer src="/src/protected.js"></script>
+  </head>
+
+  <body>
+
+    <form class="form-signin">
+      <h1>Protected Route</h1>
+      <h2>User ID: <span class="user-id"></span></h2>
+      <input type="text" name="id" id="id" class="form-control" placeholder="id" required autofocus>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Get /protected/:id</button>
+      <div class="message">Message here</div>
+    </form>
+</body>
+</html>
