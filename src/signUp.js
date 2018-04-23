@@ -1,26 +1,22 @@
 (function() {
   'use strict';
 
-  request('/auth/token')
-  .then(function(response){
-    // user is authenticated
-
-  })
-  .catch(function(error){
-    // user is not authenticated
-  })
-
-
-
-  // signup form
+  // login form
   document.querySelector('.form-signup').addEventListener('submit', function(event){
     event.preventDefault()
 
+    const name = event.target.name.value
     const email = event.target.email.value
     const password = event.target.password.value
 
-    request('/auth/token', 'post', { email , password })
+    request('/users', 'post', { name, email, password })
+
+
+
     .then(function(response){
+      return request('/auth/token', 'post', { email , password })
+    })
+    .then (function(response){
       document.querySelector('#error').classList.add('hide-auth-error')
       localStorage.setItem('token', response.data.token)
       window.location = '/protected.html'
@@ -29,6 +25,5 @@
       document.querySelector('#error').classList.remove('hide-auth-error')
     })
   })
-
 
 })();
