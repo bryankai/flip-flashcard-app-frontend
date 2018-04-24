@@ -1,19 +1,8 @@
 (function() {
   'use strict';
 
-  request('/auth/token')
-  .then(function(response){
-    // user is authenticated
-
-  })
-  .catch(function(error){
-    // user is not authenticated
-  })
-
-
-
-  // signup form
-  document.querySelector('.form-signup').addEventListener('submit', function(event){
+  // login form
+  document.querySelector('.form-login').addEventListener('submit', function(event){
     event.preventDefault()
 
     const email = event.target.email.value

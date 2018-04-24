@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // login form
+  // signup form
   document.querySelector('.form-signup').addEventListener('submit', function(event){
     event.preventDefault()
 
@@ -10,8 +10,6 @@
     const password = event.target.password.value
 
     request('/users', 'post', { name, email, password })
-
-
 
     .then(function(response){
       return request('/auth/token', 'post', { email , password })
