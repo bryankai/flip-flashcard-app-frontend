@@ -9,6 +9,12 @@ body {
   flex-wrap: wrap
 }
 
+.cards-grid {
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap
+}
+
 .card {
   margin: 15;
 }

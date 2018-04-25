@@ -1,5 +1,4 @@
 function request(path, method = 'get', body = null) {
-  console.log('helpers function')
   let bearerToken = ''
   const token = localStorage.getItem('token')
 

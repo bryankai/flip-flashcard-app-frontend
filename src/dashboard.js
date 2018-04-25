@@ -39,7 +39,7 @@
         const front = document.createElement('div')
         front.classList.add('front')
         const frontLink = document.createElement('a')
-        frontLink.href = "deck.html"
+        frontLink.href = `deck.html?deckId=${dbDeck.id}`
         const frontText = document.createElement('div')
         frontText.classList.add('frontText')
         frontText.innerHTML = dbDeck.deckName
@@ -51,7 +51,7 @@
         const back = document.createElement('div')
         back.classList.add('back')
         const backLink = document.createElement('a')
-        backLink.href = "deck.html"
+        backLink.href = `deck.html?deckId=${dbDeck.id}`
         const backText = document.createElement('div')
         backText.classList.add('backText')
         backText.innerHTML = dbDeck.description
