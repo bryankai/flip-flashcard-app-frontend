@@ -1,0 +1,99 @@
+body {
+  display: block;
+  background-color: white;
+}
+
+.decks-grid {
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.card {
+  margin: 15;
+}
+
+.button-continaer{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+/* Drop Shadow */
+
+/* .card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+} */
+
+/* CARD FLIPPING */
+
+/* entire container, keeps perspective */
+
+.flip-container {
+  perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 18rem;
+  height: 200px;
+}
+
+/* flip speed goes here */
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* front pane, placed above back */
+
+.front {
+  background-color: #f8f8f8;
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+  background-color: #f8f8f8;
+  transform: rotateY(180deg);
+}
+
+.frontText {
+  font-size: 28px
+}
+
+.backText {
+  font-size: 20px
+}
+
+a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
