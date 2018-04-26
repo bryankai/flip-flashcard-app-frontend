@@ -2,7 +2,7 @@
   'use strict';
   const deckId = parseInt(window.location.search.slice(8))
   let id
-
+  let currentIndex = 0
   // authe gate
   request('/auth/token')
     .then(response => {
@@ -12,7 +12,7 @@
       window.location = '/index.html'
     })
 
-    // load deck information
+    // Load Quiz Page
     .then(function() {
       console.log(id)
       console.log(deckId)
@@ -21,28 +21,23 @@
     .then(response => {
       console.log(response.data)
       const { data } = response.data
-      return response.data
+      console.log(data)
+      console.log('data')
+
+      // Initializing
+      const randomOrderArr = createRandomDeckOrder(data)
+      newQuiz(id, deckId, randomOrderArr)
+      return data
     })
 
-  // EVENT LISTENERS
   document.getElementById('next').addEventListener('click', function(event){
-    console.log('next')
+    nextCard()
   })
 
-  document.getElementById('back').addEventListener('click', function(event){
-    console.log('back')
-  })
-
-  document.getElementById('correct').addEventListener('click', function(event){
-    console.log('correct')
-  })
-
-  document.getElementById('incorrect').addEventListener('click', function(event){
-    console.log('incorrect')
-  })
-
-  document.querySelector('.flashcard').addEventListener('click', function(event){
-    console.log('flip!')
-  })
+  // next card aka RENDER
+  function nextCard() {
+    currentIndex++
+    console.log(currentIndex)
+  }
 
 })();

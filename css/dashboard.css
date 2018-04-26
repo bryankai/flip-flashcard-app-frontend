@@ -19,7 +19,7 @@ body {
   margin: 15;
 }
 
-.button-continaer{
+.button-continaer {
   width: 100%;
   max-width: 330px;
   padding: 15px;
@@ -42,7 +42,7 @@ body {
 
 /* flip the pane when hovered */
 
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+.flip-container.flip .flipper {
   transform: rotateY(180deg);
 }
 
@@ -80,7 +80,6 @@ body {
   transform: rotateY(0deg);
 }
 
-
 /* back, initially hidden pane */
 
 .back {
@@ -102,4 +101,23 @@ a {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+/* VERTICAL FLIP FOR QUIZ */
+
+.vertical.flip-container {
+  position: relative;
+}
+
+.vertical .back {
+  transform: rotateX(180deg);
+}
+
+.vertical.flip-container .flipper {
+  transform-origin: 100% 100px;
+  /* half of height */
+}
+
+.vertical.flip-container.flip .flipper {
+  transform: rotateX(-180deg);
 }

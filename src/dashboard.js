@@ -24,10 +24,10 @@
         const deck = document.createElement('div')
         deck.classList.add('flip-container','card', 'border-light', 'mb-3')
         deck.addEventListener('mouseenter', event => {
-          event.target.classList.toggle('hover')
+          event.target.classList.toggle('flip')
         })
         deck.addEventListener('mouseleave', event => {
-          event.target.classList.toggle('hover')
+          event.target.classList.toggle('flip')
         })
         deckGrid.appendChild(deck)
 

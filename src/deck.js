@@ -29,10 +29,10 @@
         const card = document.createElement('div')
         card.classList.add('flip-container','card', 'border-light', 'mb-3')
         card.addEventListener('mouseenter', event => {
-          event.target.classList.toggle('hover')
+          event.target.classList.toggle('flip')
         })
         card.addEventListener('mouseleave', event => {
-          event.target.classList.toggle('hover')
+          event.target.classList.toggle('flip')
         })
         cardGrid.appendChild(card)
 
