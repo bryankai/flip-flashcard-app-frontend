@@ -6,11 +6,9 @@
   // authe gate
   request('/auth/token')
     .then(response => {
-      // user is logged in
       id = response.data.id
     })
     .catch(error => {
-      // user is not logged in
       window.location = '/index.html'
     })
 
@@ -53,7 +51,6 @@
         front.appendChild(frontLink)
         front.appendChild(frontText)
 
-
         const back = document.createElement('div')
         back.classList.add('back')
         const backLink = document.createElement('a')
@@ -64,10 +61,8 @@
         flipper.appendChild(back)
         back.appendChild(backLink)
         back.appendChild(backText)
-
       })
       return response.data
-
     })
 
 
@@ -78,6 +73,11 @@
     const passage = event.target.passage.value
     request(`/users//${id}/decks/${deckId}/cards`, 'post', { decks_id: deckId, deckId, bibleReference , passage })
     window.location = `/deck.html?deckId=${deckId}`
+  })
+
+  // Quiz Button
+  document.getElementById('quiz').addEventListener('click', function(event){
+    window.location = `/quiz.html?deckId=${deckId}`
   })
 
 })();
