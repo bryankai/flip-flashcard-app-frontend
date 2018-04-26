@@ -7,6 +7,7 @@
     .then(response => {
       // user is logged in
       id = response.data.id
+      console.log(id)
     })
     .catch(error => {
       // user is not logged in
@@ -17,9 +18,7 @@
       return request(`/users/${id}/decks`, 'get')
     })
     .then(response => {
-      const {
-        data
-      } = response.data
+      const {data} = response.data
       data.forEach(dbDeck => {
         const deckGrid = document.querySelector('.decks-grid')
         const deck = document.createElement('div')
@@ -60,10 +59,14 @@
         back.appendChild(backText)
       })
       document.querySelector('.card-title').innerHTML = data[0].deckName
-      return response.data
 
+      console.log('finished script')
+      // get user score
+      getUserScore(id)
+
+      return response.data
     })
-    console.log('finished script')
+
 
   // Create New Deck Event Listener
   document.querySelector('.form-create-deck').addEventListener('submit', function(event){
