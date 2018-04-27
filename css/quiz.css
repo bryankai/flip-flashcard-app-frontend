@@ -7,7 +7,26 @@
   display: flex;
   justify-content: center;
 }
+
 .button-continaer, .results-container{
   display: flex;
   justify-content: space-evenly;
+  align-items: baseline
 }
+
+.results-container {
+  margin-top: 1rem;
+}
+
+.result {
+  margin-left: 10px;
+}
+
+.title {
+  /* color: darkgray; */
+}
+
+/* .results.title.row {
+  display: flex;
+  justify-content: center;
+} */

@@ -89,6 +89,9 @@ function displayResults() {
   const percentageCorrect = Math.floor(numberCorrect/randomOrderArr.length*100)
   const percentageText = document.querySelector('.percentage-text')
   percentageText.innerHTML=`${percentageCorrect}%`
+  document.getElementById('decks-button').addEventListener('click', event => {
+    window.location = `/deck.html?deckId=${deckId}`
+  })
 }
 
 })();
