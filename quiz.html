@@ -28,35 +28,59 @@
 
 <body>
 
-
-  <div class="container">
-    <div class="row justify-content-md-center ">
-      <div class="col col-lg-2">
-        <button type="button" class="btn btn-secondary" id="back">
+  <div class="flashcard-container">
+    <div class="container">
+      <div class="row justify-content-md-center ">
+        <!-- <div class="col col-lg-2">
+          <button type="button" class="btn btn-secondary" id="back">
             Back
-        </button>
-      </div>
-      <div class="col-md-auto">
-        <div class="flashcard">
+          </button>
+        </div> -->
+        <div class="col-md-auto">
+          <div class="flashcard">
+          </div>
         </div>
-      </div>
-      <div class="col col-lg-2">
-        <button type="button" class="btn btn-secondary" id="next">
+        <!-- <div class="col col-lg-2">
+          <button type="button" class="btn btn-secondary" id="next">
             Next
-        </button>
+          </button>
+        </div> -->
       </div>
-    </div>
-    <div class="button-continaer">
-      <div clas="row1">
-        <button type="button" class="btn btn-primary" id="correct">
+      <div class="button-continaer">
+        <div clas="row1">
+          <button type="button" class="btn btn-primary" id="correct">
             √
         </button>
-        <button type="button" class="btn btn-primary" id="incorrect">
+          <button type="button" class="btn btn-primary" id="incorrect">
             X
         </button>
+        </div>
       </div>
     </div>
-
+  </div>
+  <div class="results-container">
+    <div class="results-sub-container">
+      <div class="results-title row">
+        <h2>Results</h2>
+      </div>
+      <div class="temp row">
+        <div class="temp icon">
+          <h4>temp</h4>
+        </div>
+        <div class="temp description">
+          <h3></h3>
+        </div>
+      </div>
+      <div class="correct row">
+        <div class="correct icon">
+          <h4>Correct</h4>
+        </div>
+        <div class="correct description">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

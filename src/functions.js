@@ -18,9 +18,7 @@ function getUserScore(users_id) {
 }
 
 // Quiz functions
-function newQuiz(id, deckId, data) {
-    console.log(data)
-    data.forEach(dbCard => {
+function newQuiz() {
       const flashCard = document.querySelector('.flashcard')
       const card = document.createElement('div')
       card.classList.add('vertical', 'flip-container','card', 'border-light', 'mb-3')
@@ -37,7 +35,6 @@ function newQuiz(id, deckId, data) {
       front.classList.add('front')
       const frontText = document.createElement('div')
       frontText.classList.add('frontText')
-      frontText.innerHTML = dbCard.bibleReference
       flipper.appendChild(front)
       front.appendChild(frontText)
 
@@ -45,22 +42,8 @@ function newQuiz(id, deckId, data) {
       back.classList.add('back')
       const backText = document.createElement('div')
       backText.classList.add('backText')
-      backText.innerHTML = dbCard.passage
       flipper.appendChild(back)
       back.appendChild(backText)
-
-      // EVENT LISTENERS
-
-      document.getElementById('back').addEventListener('click', function(event){
-        console.log('back')
-      })
-      document.getElementById('correct').addEventListener('click', function(event){
-        console.log('correct')
-      })
-      document.getElementById('incorrect').addEventListener('click', function(event){
-        console.log('incorrect')
-      })
-    })
 }
 
 // Create Random Order
