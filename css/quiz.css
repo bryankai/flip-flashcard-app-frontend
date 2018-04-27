@@ -3,13 +3,11 @@
   display: none;
 }
 
-
-
 .flashcard {
   display: flex;
   justify-content: center;
 }
 .button-continaer, .results-container{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }

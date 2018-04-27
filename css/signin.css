@@ -61,6 +61,10 @@ body {
   display: inline;
 }
 
+.button-container {
+  display: flex
+}
+
 #signUp {
   width: 100%;
   max-width: 320px;
