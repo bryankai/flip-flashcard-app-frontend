@@ -71,18 +71,24 @@
       const flashCard = document.querySelector('.flashcard-container')
       flashCard.style.display = 'none';
       const results = document.querySelector('.results-container')
-      results.firstElementChild.innerHTML="results!"
+      // results.firstElementChild.innerHTML="results!"
       displayResults()
     }
 
   }
 function displayResults() {
-  // const numCorrect = document.querySelector('.correct-description-text')
-  // numCorrect.innerHTML="asdf"
+  console.log('display results!')
   const flashcardCont = document.querySelector('.flashcard-container')
   const resultsCont = document.querySelector('.results-sub-container')
   flashcardCont.style.display = "none"
   resultsCont.style.display = "block"
+  const correctText = document.querySelector('.correct-text')
+  correctText.innerHTML=`${numberCorrect}/${randomOrderArr.length}`
+
+  // Percentage
+  const percentageCorrect = Math.floor(numberCorrect/randomOrderArr.length*100)
+  const percentageText = document.querySelector('.percentage-text')
+  percentageText.innerHTML=`${percentageCorrect}%`
 }
 
 })();

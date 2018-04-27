@@ -13,6 +13,14 @@
       // user is not logged in
       window.location = '/index.html'
     })
+    // load user name
+    .then(function() {
+      return request(`/users/${id}`, 'get')
+    })
+    .then(response => {
+      name = response.data.data.name
+      document.getElementById('userName').innerHTML = name
+    })
     // load deck information
     .then(response => {
       return request(`/users/${id}/decks`, 'get')

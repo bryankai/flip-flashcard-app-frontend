@@ -1,3 +1,19 @@
+/* To accomodate Nav Bar */
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
 .navbar-brand {
   font-family: 'Audiowide', cursive;
+}
+
+.button-continaer{
+  display: flex;
+  justify-content: space-evenly;
 }

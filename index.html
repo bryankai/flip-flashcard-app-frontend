@@ -1,35 +1,43 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html lang="en">
 
-    <title>Flip</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>Flip</title>
 
-    <!-- Custom styles -->
-    <link href="/css/signin.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-    <script defer src="/src/helpers.js"></script>
-    <script defer src="/src/logo.js"></script>
-    <script defer src="/src/index.js"></script>
-  </head>
+  <!-- Custom styles -->
+  <link href="/css/signin.css" rel="stylesheet">
 
-  <body class="text-center">
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  <script defer src="/src/helpers.js"></script>
+  <!-- <script defer src="/src/logo.js"></script> -->
+  <script defer src="/src/index.js"></script>
+</head>
+
+<body class="text-center">
+  <div class="form container">
     <form class="form-login">
-      <img id="logo" src="/img/velociraptors.png" alt="" width="200" height="200">
+      <img id="logo" src="/img/logo.png" alt="" width="340" height="88">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="text" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required autocomplete="off">
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+        <div class="button-row">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+
+        </div>
       <div id="error" class="hide-auth-error">Incorrect Email or Password</div>
     </form>
     <a href="signUp.html"><button class="btn btn-lg btn-primary btn-block" id="signUp">Sign Up</button></a>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -11,7 +11,14 @@
     .catch(error => {
       window.location = '/index.html'
     })
-
+    // load user name
+    .then(function() {
+      return request(`/users/${id}`, 'get')
+    })
+    .then(response => {
+      name = response.data.data.name
+      document.getElementById('userName').innerHTML = name
+    })
     // load deck information
     .then(function() {
       console.log(id)

@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
   <!-- Custom styles -->
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
   <link href="/css/dashboard.css" rel="stylesheet">
 
   <!-- Scripts -->
@@ -25,6 +27,26 @@
 
 <body>
 
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html?id=1">Flip</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <div class="nav-link" id="userName"></div>
+          </li>
+          <li class="nav-item active">
+            <div class="nav-link" id="userScore"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Modal Button -->
   <div class="button-continaer">
     <div clas="row1">
@@ -35,10 +57,7 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCardModal">
       Create Card
     </button>
-    <!-- Other buttons -->
-    <button type="button" class="btn btn-primary">
-        Delete Deck
-    </button>
+
   </div>
 
   <!-- Modal -->
