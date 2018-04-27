@@ -3,7 +3,6 @@ function getUserScore(users_id) {
   console.log(users_id)
   request(`/users/${users_id}/allAttempts`)
     .then(data => {
-      // console.log(data.data.data)
       attemptsArray=data.data.data
       const correctArray = attemptsArray.filter(element => {
         return element.correct

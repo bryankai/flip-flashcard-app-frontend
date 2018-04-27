@@ -1,16 +1,14 @@
-body {
+/* body {
   display: block;
   background-color: white;
-}
+} */
 
 .decks-grid {
-  background-color: yellow;
   display: flex;
   flex-wrap: wrap
 }
 
 .cards-grid {
-  background-color: yellow;
   display: flex;
   flex-wrap: wrap
 }
@@ -95,13 +93,13 @@ body {
   font-size: 20px
 }
 
-a {
+/* a {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-}
+} */
 
 /* VERTICAL FLIP FOR QUIZ */
 

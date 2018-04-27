@@ -29,6 +29,9 @@
         deck.addEventListener('mouseleave', event => {
           event.target.classList.toggle('flip')
         })
+        deck.addEventListener('click', event => {
+          window.location = `/deck.html?deckId=${dbDeck.id}`
+        })
         deckGrid.appendChild(deck)
 
         const flipper = document.createElement('div')
@@ -37,28 +40,27 @@
 
         const front = document.createElement('div')
         front.classList.add('front')
-        const frontLink = document.createElement('a')
-        frontLink.href = `deck.html?deckId=${dbDeck.id}`
+        // const frontLink = document.createElement('a')
+        // frontLink.href = `deck.html?deckId=${dbDeck.id}`
         const frontText = document.createElement('div')
         frontText.classList.add('frontText')
         frontText.innerHTML = dbDeck.deckName
         flipper.appendChild(front)
-        front.appendChild(frontLink)
+        // front.appendChild(frontLink)
         front.appendChild(frontText)
 
 
         const back = document.createElement('div')
         back.classList.add('back')
-        const backLink = document.createElement('a')
-        backLink.href = `deck.html?deckId=${dbDeck.id}`
+        // const backLink = document.createElement('a')
+        // backLink.href = `deck.html?deckId=${dbDeck.id}`
         const backText = document.createElement('div')
         backText.classList.add('backText')
         backText.innerHTML = dbDeck.description
         flipper.appendChild(back)
-        back.appendChild(backLink)
+        // back.appendChild(backLink)
         back.appendChild(backText)
       })
-      document.querySelector('.card-title').innerHTML = data[0].deckName
 
       console.log('finished script')
       // get user score
