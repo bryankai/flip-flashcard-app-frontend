@@ -12,8 +12,10 @@
   <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
   <!-- Custom styles -->
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
   <link href="/css/quiz.css" rel="stylesheet">
   <link href="/css/dashboard.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -29,10 +31,11 @@
 </head>
 
 <body>
-  <!-- Navigation -->
+
+  <!-- NAV BAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="dashboard.html?id=1">Flip</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -44,37 +47,22 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#" id="userName"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-
+  <!-- FLASHCARD -->
   <div class="flashcard-container">
     <div class="container">
       <div class="row justify-content-md-center ">
-        <!-- <div class="col col-lg-2">
-          <button type="button" class="btn btn-secondary" id="back">
-            Back
-          </button>
-        </div> -->
         <div class="col-md-auto">
           <div class="flashcard">
           </div>
         </div>
-        <!-- <div class="col col-lg-2">
-          <button type="button" class="btn btn-secondary" id="next">
-            Next
-          </button>
-        </div> -->
       </div>
       <div class="button-continaer">
         <div clas="row1">
@@ -88,29 +76,24 @@
       </div>
     </div>
   </div>
+
+  <!-- RESULTS -->
   <div class="results-container">
     <div class="results-sub-container">
       <div class="results-title row">
         <h2>Results</h2>
       </div>
-      <div class="temp row">
-        <div class="temp icon">
-          <h4>temp</h4>
-        </div>
-        <div class="temp description">
-          <h3></h3>
-        </div>
-      </div>
       <div class="correct row">
         <div class="correct icon">
           <h4>Correct</h4>
         </div>
-        <div class="correct description">
-          <h3></h3>
+        <div class="correct-description">
+          <h3 class="correct-description-text">This is how many you got right</h3>
         </div>
       </div>
     </div>
   </div>
+
 </body>
 
 </html>

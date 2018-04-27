@@ -1,6 +1,6 @@
-.results-sub-container {
+/* .results-sub-container {
   display: none;
-}
+} */
 
 /* From startbootstrap template */
 
@@ -12,4 +12,13 @@ body {
   body {
     padding-top: 56px;
   }
+}
+
+.flashcard {
+  display: flex;
+  justify-content: center;
+}
+.button-continaer{
+  display: flex;
+  justify-content: center;
 }

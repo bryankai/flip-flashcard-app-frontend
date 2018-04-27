@@ -42,24 +42,24 @@
 
         const front = document.createElement('div')
         front.classList.add('front')
-        const frontLink = document.createElement('a')
-        frontLink.href = "deck.html"
+        // const frontLink = document.createElement('a')
+        // frontLink.href = "deck.html"
         const frontText = document.createElement('div')
         frontText.classList.add('frontText')
         frontText.innerHTML = dbCard.bibleReference
         flipper.appendChild(front)
-        front.appendChild(frontLink)
+        // front.appendChild(frontLink)
         front.appendChild(frontText)
 
         const back = document.createElement('div')
         back.classList.add('back')
-        const backLink = document.createElement('a')
-        backLink.href = "deck.html"
+        // const backLink = document.createElement('a')
+        // backLink.href = "deck.html"
         const backText = document.createElement('div')
         backText.classList.add('backText')
         backText.innerHTML = dbCard.passage
         flipper.appendChild(back)
-        back.appendChild(backLink)
+        // back.appendChild(backLink)
         back.appendChild(backText)
       })
       return response.data
