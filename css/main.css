@@ -9,8 +9,18 @@ body {
   }
 }
 
+/* Nav Bar Edits */
 .navbar-brand {
   font-family: 'Audiowide', cursive;
+}
+
+.nav-item {
+  display: flex;
+
+}
+
+#userScore {
+  color: yellow;
 }
 
 .button-continaer{

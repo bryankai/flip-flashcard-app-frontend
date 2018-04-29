@@ -19,20 +19,27 @@ function request(path, method = 'get', body = null) {
 
 // User Score
 function getUserScore(users_id) {
-  console.log(users_id)
-  request(`/users/${users_id}/allAttempts`)
+  let userScore
+  console.log('step1');
+  return request(`/users/${users_id}/allAttempts`)
     .then(data => {
       attemptsArray=data.data.data
       const correctArray = attemptsArray.filter(element => {
         return element.correct
       })
-      const userScore = correctArray.length*10
-      console.log(userScore)
+      userScore = correctArray.length*10
+      console.log('bryan',userScore)
       return userScore
     })
+    // .then(data => {
+    //   return data
+    // })
     .catch(error => {
       console.log('score error')
     })
+  // console.log('step2')
+  // console.log('pat',userScore)
+  // return userScore
 }
 
 // Quiz functions

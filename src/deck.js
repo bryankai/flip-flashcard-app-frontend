@@ -69,8 +69,12 @@
         // back.appendChild(backLink)
         back.appendChild(backText)
       })
-      return response.data
+      return getUserScore(id)
     })
+    .then(userScore => {
+      console.log('userScore dashboard ', userScore)
+      document.getElementById('userScore').innerHTML=userScore
+    });
 
 
   // Modal Form Event

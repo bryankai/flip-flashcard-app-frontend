@@ -57,25 +57,20 @@
         // front.appendChild(frontLink)
         front.appendChild(frontText)
 
-
         const back = document.createElement('div')
         back.classList.add('back')
-        // const backLink = document.createElement('a')
-        // backLink.href = `deck.html?deckId=${dbDeck.id}`
         const backText = document.createElement('div')
         backText.classList.add('backText')
         backText.innerHTML = dbDeck.description
         flipper.appendChild(back)
-        // back.appendChild(backLink)
         back.appendChild(backText)
       })
-
-      console.log('finished script')
       // get user score
-      getUserScore(id)
-
-      return response.data
+      return getUserScore(id)
     })
+    .then(userScore => {
+      document.getElementById('userScore').innerHTML=userScore
+    });
 
 
   // Create New Deck Event Listener
