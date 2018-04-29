@@ -17,3 +17,7 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+
+.front, .back {
+  padding:15px;
+}

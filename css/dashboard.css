@@ -3,14 +3,10 @@
   background-color: white;
 } */
 
-.decks-grid {
+.decks-grid, .cards-grid{
   display: flex;
-  flex-wrap: wrap
-}
-
-.cards-grid {
-  display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {

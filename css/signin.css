@@ -59,14 +59,16 @@ body {
 
 .button-row {
   display: inline;
+  margin: 15px;
 }
 
-.button-container {
-  display: flex
-}
 
 #signUp {
   width: 100%;
-  max-width: 320px;
+  max-width: 150px;
   margin: auto;
+}
+
+#logo {
+  margin:25px;
 }
