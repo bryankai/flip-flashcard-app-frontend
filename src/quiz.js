@@ -57,9 +57,7 @@
         currentIndex++
         if(attempt) numberCorrect++
     }
-    console.log(`Number Correct: ${numberCorrect}`)
     if(currentIndex < randomOrderArr.length) {
-      console.log(currentIndex)
       const currentCard = randomOrderArr[currentIndex];
       const flashCard = document.querySelector('.flashcard')
       const frontText = document.querySelector('.frontText')
@@ -77,7 +75,6 @@
 
   }
 function displayResults() {
-  console.log('display results!')
   const flashcardCont = document.querySelector('.flashcard-container')
   const resultsCont = document.querySelector('.results-sub-container')
   flashcardCont.style.display = "none"

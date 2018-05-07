@@ -20,7 +20,6 @@ function request(path, method = 'get', body = null) {
 // User Score
 function getUserScore(users_id) {
   let userScore
-  console.log('step1');
   return request(`/users/${users_id}/allAttempts`)
     .then(data => {
       attemptsArray=data.data.data
@@ -28,18 +27,10 @@ function getUserScore(users_id) {
         return element.correct
       })
       userScore = correctArray.length*10
-      console.log('bryan',userScore)
       return userScore
     })
-    // .then(data => {
-    //   return data
-    // })
     .catch(error => {
-      console.log('score error')
     })
-  // console.log('step2')
-  // console.log('pat',userScore)
-  // return userScore
 }
 
 // Quiz functions
@@ -73,12 +64,10 @@ function newQuiz() {
 
 // Create Random Order for Quiz
 function createRandomDeckOrder(cardIdArr) {
-  // const cardIdArr = cardsArr.map(card => card.id)
   let length = cardIdArr.length
   let randomOrderArr=[]
   for (let i=0; i<length; i++) {
     randomOrderArr.push(cardIdArr.splice(Math.floor(Math.random()*cardIdArr.length),1)[0])
   }
-  console.log(randomOrderArr)
   return randomOrderArr
 }

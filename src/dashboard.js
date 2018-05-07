@@ -1,13 +1,11 @@
 (function() {
   'use strict';
   let id
-  console.log('dashboard page!')
   // authe gate
   request('/auth/token')
     .then(response => {
       // user is logged in
       id = response.data.id
-      console.log(id)
     })
     .catch(error => {
       // user is not logged in
@@ -72,17 +70,13 @@
       document.getElementById('userScore').innerHTML=userScore
     });
 
-
   // Create New Deck Event Listener
   document.querySelector('.form-create-deck').addEventListener('submit', function(event){
     event.preventDefault()
     const deckName = event.target.name.value
     const description = event.target.description.value
     const users_id = id
-    console.log(users_id)
     request(`/users/${id}/decks`, 'post', { deckName , description, users_id })
     window.location = '/dashboard.html'
   })
-
-
 })();

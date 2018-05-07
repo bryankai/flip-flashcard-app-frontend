@@ -21,17 +21,11 @@
     })
     // load deck information
     .then(function() {
-      console.log(id)
-      console.log(deckId)
       return request(`/users/${id}/decks/${deckId}/cards`, 'get')
     })
     .then(response => {
-      console.log(response.data)
-      const {
-        data
-      } = response.data
+      const { data } = response.data
       data.forEach(dbCard => {
-        console.log('forEach')
         const cardGrid = document.querySelector('.cards-grid')
         const card = document.createElement('div')
         card.classList.add('flip-container','card', 'border-light', 'mb-3')
@@ -49,30 +43,23 @@
 
         const front = document.createElement('div')
         front.classList.add('front')
-        // const frontLink = document.createElement('a')
-        // frontLink.href = "deck.html"
         const frontText = document.createElement('div')
         frontText.classList.add('frontText')
         frontText.innerHTML = dbCard.bibleReference
         flipper.appendChild(front)
-        // front.appendChild(frontLink)
         front.appendChild(frontText)
 
         const back = document.createElement('div')
         back.classList.add('back')
-        // const backLink = document.createElement('a')
-        // backLink.href = "deck.html"
         const backText = document.createElement('div')
         backText.classList.add('backText')
         backText.innerHTML = dbCard.passage
         flipper.appendChild(back)
-        // back.appendChild(backLink)
         back.appendChild(backText)
       })
       return getUserScore(id)
     })
     .then(userScore => {
-      console.log('userScore dashboard ', userScore)
       document.getElementById('userScore').innerHTML=userScore
     });
 
