@@ -6,7 +6,7 @@ function request(path, method = 'get', body = null) {
     bearerToken = `Bearer ${token}`
   }
 
-  return axios(`http://localhost:3000${path}`, {
+  return axios(`https://bk-flip-app.herokuapp.com${path}`, {
     method: method,
     headers: {
       'Content-Type': 'application/json',
