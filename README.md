@@ -1,7 +1,7 @@
 # Flip
 http://flip-flashcard-app.surge.sh/
 
-An interactive flashcard web application to help users memorize specific bible passages and their verse reference.  You can create your own collections of cards for better organization.  Users can mark cards as memorized and keep track of which cards are memorized.  The user's total score is stored in the database and displayed next to their name in the header.
+An interactive flashcard web application to help users memorize information.  Users can create decks to organize groups of cards by topic or any grouping you want.  You can take a quiz on different decks and get the results for the latest quiz session.  The user's total score is stored in the database and displayed next to their name in the header on the dashboard page.
 
 ![dashboard](./img/flip-dashboard.png)
 Dashboard
